@@ -390,7 +390,7 @@
             }
         };
         S.ShapeBuilder = (function () {
-            var gap = 13,
+            var gap = 18,
                 shapeCanvas = document.createElement('canvas'),
                 shapeContext = shapeCanvas.getContext('2d'),
                 fontSize = 500,
@@ -459,7 +459,7 @@
                     image.src = url;
                 },
                 circle: function (d) {
-                    var r = Math.max(0, d) / 2;
+                    var r = Math.max(0, d-2) / 2;
                     shapeContext.clearRect(0, 0, shapeCanvas.width, shapeCanvas.height);
                     shapeContext.beginPath();
                     shapeContext.arc(r * gap, r * gap, r * gap, 0, 2 * Math.PI, false);
@@ -584,7 +584,7 @@
             };
         }());
         S.init();
-        const audio = new Audio("You.mp3");
+        const audio = new Audio("rsc/You.mp3");
 
     function handleClick() {
         audio.play();
@@ -595,5 +595,6 @@
 
 
 </body>
-
 </html>
+</html>
+
